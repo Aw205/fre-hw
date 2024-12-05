@@ -1,0 +1,43 @@
+body {
+    background-color: whitesmoke;
+}
+
+#tweet-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border: 1px solid #cfd9de;
+    border-radius: 16px;
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    max-width: 580px;
+}
+
+.action-count {
+    color: #536471;
+    font: 13px sans-serif;
+    padding-left: 12px;
+    padding-right: 15%;
+}
+
+#metadata {
+    color: #000;
+    font: bold 15px sans-serif;
+}
+
+#metadata span {
+    color: #71767b;
+    font-weight: normal;
+    margin: 0;
+    padding-left: 4px;
+}
+
+#message {
+    color: #0f1419;
+    font: 15px sans-serif;
+    margin-top: 2px;
+    margin-bottom: 12px;
+}
