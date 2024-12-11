@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <table style="position: absolute; left: 30%; top: 30%;">
+        <tr>
+            <th>region</th>
+            <th>model</th>
+            <th>sales</th>
+        </tr>
+    </table>
+
+    <div style="position: absolute; left: 50%; top: 30%;">
+        <label for="region">Region Filter:</label>
+        <select name="region">
+            <option value="All">All</option>
+            <option value="US">US</option>
+            <option value="EU">EU</option>
+            <option value="CA">CA</option>
+        </select>
+        <label for="model">Model Filter:</label>
+        <select name="model">
+            <option value="All">All</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+        </select>
+        <table>
+            <tr>
+                <th>region</th>
+                <th>model</th>
+                <th>sales</th>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+
+        const data = [
+            { region: 'US', model: 'A', sales: 150 },
+            { region: 'US', model: 'B', sales: 120 },
+            { region: 'US', model: 'C', sales: 350 },
+            { region: 'EU', model: 'A', sales: 200 },
+            { region: 'EU', model: 'B', sales: 100 },
+            { region: 'EU', model: 'C', sales: 250 },
+            { region: 'CA', model: 'A', sales: 200 },
+            { region: 'CA', model: 'B', sales: 100 },
+            { region: 'CA', model: 'C', sales: 230 },
+            { region: 'CA', model: 'D', sales: 400 },
+        ];
+
+        let sumTable = document.getElementsByTagName("table")[0];
+        let filterTable = document.getElementsByTagName("table")[1];
+
+        let sum = data.reduce((acc, curr) => {
+            !(curr.region in acc) && (acc[curr.region] = 0);
+            acc[curr.region] += curr.sales;
+            return acc;
+        }, {});
+
+        let currRegion = "";
+        for (let record of data) {
+
+            let recordHTML = `<tr><td>${record.region} </td><td>${record.model} </td><td>${record.sales}</td></tr>`;
+            if (currRegion != record.region) {
+                sumTable.innerHTML += `<tr><td>${record.region} </td><td>sum </td><td>${sum[record.region]}</td></tr>`;
+                currRegion = record.region;
+            }
+            sumTable.innerHTML += recordHTML;
+            filterTable.innerHTML += recordHTML;
+        }
+
+        let regionFilter = document.getElementsByTagName("select")[0];
+        let modelFilter = document.getElementsByTagName("select")[1];
+        for (let i = 0; i < 2; i++) {
+            document.getElementsByTagName("select")[i].addEventListener('change', () => {
+                for (let i = 1; 1 < filterTable.children.length; i++) {
+                    let row = filterTable.children[i];
+                    let filter = (regionFilter.value == "All" || row.textContent.split(" ").includes(regionFilter.value));
+                    let filter2 = (modelFilter.value == "All" || row.textContent.split(" ").includes(modelFilter.value));
+                    row.style.display = (filter && filter2) ? "table-row-group" : "none";
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>
