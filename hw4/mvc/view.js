@@ -3,6 +3,7 @@ export const View = (() => {
         inputBox: "todolist-input",
         listContainer: "todolist-container",
         deleteBtn: "delete-btn",
+        addBtn: "add-button"
     };
 
     const createTmp = (todoArr) => {

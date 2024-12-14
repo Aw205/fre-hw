@@ -7,6 +7,7 @@ export const Controller = ((model, view) => {
         `.${view.domstr.listContainer}`
     );
     const inputbox = document.querySelector(`.${view.domstr.inputBox}`);
+    // const addButton = document.querySelector(`#${view.domstr.addBtn}`);
 
     const deleteTodo = () => {
         todoContainer.addEventListener("click", (e) => {
@@ -34,14 +35,23 @@ export const Controller = ((model, view) => {
         inputbox.addEventListener("keyup", (e) => {
             if (e.key === "Enter" && e.target.value.trim() !== '') {
                 const newtodo = new model.Todo(e.target.value);
-
                 model.addTodo(newtodo).then((todo) => {
                     state.todolist = [todo, ...state.todolist];
                 });
-
                 e.target.value = '';
             }
         });
+        // addButton.addEventListener("click", (e) => {
+
+        //     let inputText = inputbox.value;
+        //     if (inputText.trim() !== '') {
+        //         const newtodo = new model.Todo(inputText);
+        //         model.addTodo(newtodo).then((todo) => {
+        //             state.todolist = [todo, ...state.todolist];
+        //         });
+        //         inputbox.value = '';
+        //     }
+        // });
     };
 
     const init = () => {
