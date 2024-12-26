@@ -75,7 +75,7 @@
         let currRegion = "";
         for (let record of data) {
 
-            let recordHTML = `<tr><td>${record.region} </td><td>${record.model} </td><td>${record.sales}</td></tr>`;
+            let recordHTML = `<tr><td>${record.region} </td><td>${record.model} </td><td>${record.sales}</td></tr>`; // have to add space after the text
             if (currRegion != record.region) {
                 sumTable.innerHTML += `<tr><td>${record.region} </td><td>sum </td><td>${sum[record.region]}</td></tr>`;
                 currRegion = record.region;
@@ -90,13 +90,12 @@
             document.getElementsByTagName("select")[i].addEventListener('change', () => {
                 for (let i = 1; 1 < filterTable.children.length; i++) {
                     let row = filterTable.children[i];
-                    let filter = (regionFilter.value == "All" || row.textContent.split(" ").includes(regionFilter.value));
+                    let filter = (regionFilter.value == "All" || row.textContent.split(" ").includes(regionFilter.value)); // could save the split array
                     let filter2 = (modelFilter.value == "All" || row.textContent.split(" ").includes(modelFilter.value));
                     row.style.display = (filter && filter2) ? "table-row-group" : "none";
                 }
             });
         }
-
     </script>
 </body>
 

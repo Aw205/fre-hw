@@ -20,7 +20,7 @@ export const Controller = ((model, view) => {
             }
             else {
                 let parent = e.target;
-                if (parent.tagName == "SPAN") {
+                if (parent.tagName == "SPAN") { // want to get the li element
                     parent = parent.parentElement;
                 }
                 parent.classList.toggle("todo-complete");

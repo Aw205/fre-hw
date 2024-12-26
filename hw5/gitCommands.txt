@@ -1,0 +1,14 @@
+Git clone projectPath - downloads a copy of a git repo located at the projectPath
+Git pull -> fetches changes from the remote repo and then merges the changes into your local branch
+Git checkout [branchName] -> allows you to switch the current branch to the branch with branchName
+Git branch [branchName] -> creates a new branch called branchName but does not switch to the new branch
+Git checkout -b [branchName] -> creates a new branch called branchName and switches to that new branch
+Git branch - lists all the local branches in your repo
+Git add . - adds all the new untracked and modified files to be tracked and staged so they can be included in the next commit
+Git commit -  saves changes of all the tracked files to create a snapshot of the current project in the local repo
+Git log - displays the commit history for the current branch you're on
+Git Push - updates the remote repo with commits from your local repo
+Git merge - combines changes from one branch into another
+Git reset vs git revert - git reset removes commits from local repo while git revert removes commits from the remote repo by adding a new commit
+Git merge vs git rebase - git merge typically has a more non-linear commit history and is useful for preserving the complete history, while rebase has a linear history because it rewrites the project history.
+Git pull vs git fetch - git fetch only downloads changes from the remote repo and doesn't perform any merging. Git pull is essentially using git fetch along with merging the changes into the current branch.
