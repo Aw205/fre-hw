@@ -1,0 +1,25 @@
+<input type="text" placeholder="search..." spellcheck="false" autocomplete="off" (keydown.enter)="onEnter()"
+    [(ngModel)]="searchVal" />
+
+<div style="position:relative; top:5vh; color: beige; font: 1rem Verdana; text-align: center;">
+
+    @if (searchDescription){
+    {{searchDescription.numResults}} results for "{{searchDescription.keyword}}"
+    }
+    @else{
+    Search albums by artist name
+    }
+    <hr style="color: dimgray;">
+</div>
+
+
+<div style="display: flex; justify-content: center; width: 30%; margin:auto; padding-top: 4vh;">
+    <div style="display: grid; gap: 1vw; grid-template-columns: repeat(6,1fr); justify-items: center;">
+        @for (data of albumData; track data){
+        <div style="color:beige; font: 1rem Verdana; border: 1px solid dimgray; text-align: center; ">
+            <img [src]="data.artworkUrl100">
+            {{data.collectionName}}
+        </div>
+        }
+    </div>
+</div>

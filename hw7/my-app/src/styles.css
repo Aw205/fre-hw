@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(30,30,30);
+}
+input{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}
+input:focus {
+    outline:none;
+}
