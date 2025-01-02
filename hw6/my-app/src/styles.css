@@ -1,0 +1,11 @@
+.item{
+    border: 1px solid gray;
+    border-left: 0.3rem solid black;
+    border-bottom: none;
+    padding: 1rem;
+    margin:0;
+}
+
+.item > b{
+    font-size: larger;
+}

@@ -1,0 +1,15 @@
+
+<div style="display: flex; flex-direction: column; width: 49%; float:left;"> 
+  <b style="font-size: x-large;">List</b>
+  @for(item of data; track item){
+    <app-item [name]="item.name" [description]="item.description" [color]="item.color"></app-item>
+  }
+</div>
+
+<div (selectEvent)="changeSelect($event)" style="float:inline-end; width: 50%;">
+  <b style="font-size: x-large;">{{selected.name}}</b>
+  <p>{{selected.description}}</p>
+</div>
+
+
+<router-outlet />
