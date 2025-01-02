@@ -6,10 +6,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ItemComponent {
 
-  @Input() name: string = "";
-  @Input() description: string = "";
-  @Input() color: string = "";
-  selected: boolean = false;
+  @Input() data!: {name: string, description:string, color:string};
+  @Input() selected: boolean = false;
 
   @Output() selectEvent = new EventEmitter<{ name: string, description: string }>()
 
@@ -19,9 +17,8 @@ export class ItemComponent {
 
   onClick() {
 
-    this.selected = !this.selected;
-    this.selectEvent.emit({ name: this.name, description: this.description });
-
+    //this.selected = !this.selected;
+    this.selectEvent.emit({ name: this.data.name, description: this.data.description });
   }
 
 }

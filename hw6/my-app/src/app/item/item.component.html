@@ -1,3 +1,3 @@
-<p (click)="onClick()"  [style.border-left-color]="color" [style.backgroundColor]="selected ? 'lightgray': ''"  [style.border-left-width]="selected ? '0.5rem': '0.3rem'" class="item">
-     <b>{{name}}</b> <br><br> {{description}}
+<p (click)="onClick()"  [style.border-left-color]="data.color" [style.backgroundColor]="selected ? 'lightgray': ''"  [style.border-left-width]="selected ? '0.5rem': '0.3rem'" class="item">
+     <b>{{data.name}}</b> <br><br> {{data.description.substring(0,100) + "..."}}
 </p>
