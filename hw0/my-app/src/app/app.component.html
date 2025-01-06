@@ -1,0 +1,9 @@
+
+<div style="font-size: x-large; font-weight: bold;" [style.color]="myColor">Main Page Title</div>
+  <div style="display: flex; justify-content: center; width: 90%; margin:auto; padding-top: 4vh;">
+    <div style="display: grid; gap: 1vw; grid-template-columns: repeat(2,1fr); justify-items: center;">
+        @for (data of cardData; track data){
+          <app-card [data]="data" [titleColor]="myColor"  (changeColor)="myColor=$event"></app-card>
+        }
+    </div>
+</div>
