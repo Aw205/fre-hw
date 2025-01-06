@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(30, 30, 30);
+
+}
+
+input {
+    background-color: beige;
+    outline: none;
+    margin-left: 1rem;
+}
+
+.card {
+
+    color: beige;
+    border-radius: 10px;
+}
+
+.card:hover {
+
+    filter: brightness(1.1);
+    outline: 1px ridge dimgray;
+
+}

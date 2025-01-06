@@ -1,0 +1,7 @@
+<div style="display: flex; justify-content: center; width: 80%; margin:auto; padding-top: 4vh; background-color: rgb(20,20,20);">
+    <div style="display: grid; gap: 1vw; grid-template-columns: repeat(5,1fr); justify-items: center;">
+        @for(movie of movieService.movies; track movie){
+        <app-movie-item [data]="movie"></app-movie-item>
+        }
+    </div>
+</div>

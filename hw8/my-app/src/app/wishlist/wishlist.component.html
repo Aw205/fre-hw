@@ -1,0 +1,9 @@
+<div style="position: fixed; top:0; right:10%; width: 20%;">
+    <p style="display: flex; color:beige; justify-content: right;">My Reading Wishlist ({{bookService.wishlistBooks.size}})</p>
+    @for(book of bookService.wishlistBooks; track book){
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px ridge dimgray">
+            <p style="color:beige;">{{book}}</p>
+            <span style="color:red; cursor: pointer; font-size: larger;" (click)="bookService.removeBook(book)">&times;</span>
+        </div>   
+    }
+</div>
