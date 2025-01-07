@@ -1,0 +1,35 @@
+<form>
+  <div style="display: flex; flex-direction: column;">
+    <div>
+      <input type="checkbox" name="selectAll" value="selectAll" [(ngModel)]="selectedAll"
+        (ngModelChange)="toggleSelectAll()">
+      <label for="selectAll">Select All</label>
+
+    </div>
+
+    @for(item of itemlist; track item){
+
+    <div>
+      <input type="checkbox" [name]="item.movie" [value]="item.movie" [(ngModel)]="item.checked"
+        (ngModelChange)="isAllChecked()">
+      <label [for]="item.movie">{{item.movie}}</label>
+    </div>
+    }
+
+    <button (click)="clearAll()" style="width: fit-content;">Clear All</button>
+  </div>
+</form>
+
+<hr>
+
+<p>Selected Values:</p>
+
+<div>
+
+  @for(item of itemlist; track item){
+    @if(item.checked){
+      <div>{{item.movie}}</div>
+    }
+  }
+
+</div>
