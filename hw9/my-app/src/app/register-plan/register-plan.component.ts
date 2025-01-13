@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-register-plan',
-  templateUrl: './register-plan.component.html',
-  styleUrl: './register-plan.component.scss'
+    selector: 'app-register-plan',
+    templateUrl: './register-plan.component.html',
+    styleUrl: './register-plan.component.scss',
+    standalone: false
 })
 export class RegisterPlanComponent {
 

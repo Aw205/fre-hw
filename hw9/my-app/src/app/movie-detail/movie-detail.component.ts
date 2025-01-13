@@ -3,9 +3,10 @@ import { MovieService } from '../movie.service';
 import { MovieImages } from '../movie';
 
 @Component({
-  selector: 'app-movie-detail',
-  templateUrl: './movie-detail.component.html',
-  styleUrl: './movie-detail.component.css'
+    selector: 'app-movie-detail',
+    templateUrl: './movie-detail.component.html',
+    styleUrl: './movie-detail.component.css',
+    standalone: false
 })
 export class MovieDetailComponent {
 

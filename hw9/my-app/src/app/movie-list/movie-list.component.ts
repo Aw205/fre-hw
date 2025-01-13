@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { MovieService } from '../movie.service';
 
 @Component({
-  selector: 'app-movie-list',
-  templateUrl: './movie-list.component.html',
-  styleUrl: './movie-list.component.css'
+    selector: 'app-movie-list',
+    templateUrl: './movie-list.component.html',
+    styleUrl: './movie-list.component.css',
+    standalone: false
 })
 export class MovieListComponent {
 

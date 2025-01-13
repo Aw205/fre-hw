@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
-  selector: 'app-register-tmdb',
-  templateUrl: './register-tmdb.component.html',
-  styleUrl: './register-tmdb.component.scss'
+    selector: 'app-register-tmdb',
+    templateUrl: './register-tmdb.component.html',
+    styleUrl: './register-tmdb.component.scss',
+    standalone: false
 })
 export class RegisterTmdbComponent {
 
