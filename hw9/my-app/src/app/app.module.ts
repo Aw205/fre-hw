@@ -15,6 +15,9 @@ import { RegisterTmdbComponent } from './register-tmdb/register-tmdb.component';
 import { RegisterPlanComponent } from './register-plan/register-plan.component';
 import { SignupComponent } from './signup/signup.component';
 import {ReactiveFormsModule} from '@angular/forms';
+import {YouTubePlayer} from '@angular/youtube-player';
+import { TrailerDialogComponent } from './trailer-dialog/trailer-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -29,7 +32,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     RegisterComponent,
     RegisterTmdbComponent,
     RegisterPlanComponent,
-    SignupComponent
+    SignupComponent,
+    TrailerDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +41,8 @@ import {ReactiveFormsModule} from '@angular/forms';
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
+    YouTubePlayer,
+    MatDialogModule
   ],
   providers: [
     provideClientHydration()

@@ -55,5 +55,23 @@ export class MovieService {
     );
 }
 
+getMovieActors(id:number){
+
+  return this.http.get(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=58c01d232e6173f5b297b33fa4bb8388`).pipe(
+    tap(movie => {
+      //console.log(JSON.stringify(movie));
+    })
+  );
+}
+
+getMovieTrailers(id:number){
+
+  return this.http.get(`https://api.themoviedb.org/3/movie/${id}/videos?language=en-US&api_key=58c01d232e6173f5b297b33fa4bb8388`).pipe(
+    tap(movie => {
+      //console.log(JSON.stringify(movie));
+    })
+  );
+}
+
 
 }

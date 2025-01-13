@@ -1,3 +1,18 @@
+:host {
+    display: block;
+    background-image: linear-gradient(rgba(0,0,0,0.9) 10%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.9) 90%), url(../../../public/netflix-background.jpg);
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: whitesmoke;
+}
+a:hover{
+    text-decoration: underline;
+}
 
 input {
     outline: none;
@@ -11,17 +26,6 @@ input {
 
 p {
     color: whitesmoke;
-}
-
-span {
-
-    color: whitesmoke;
-    cursor: pointer;
-}
-
-span:hover {
-
-    text-decoration: underline;
 }
 
 button {

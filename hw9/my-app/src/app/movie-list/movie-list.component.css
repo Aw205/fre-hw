@@ -1,3 +1,9 @@
+
+:host {
+    display: block;
+    background-color: rgb(20,20,20);
+}
+
 .movie-grid {
     display: grid;
     gap: 1vw;

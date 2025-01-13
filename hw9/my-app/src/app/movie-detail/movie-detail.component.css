@@ -1,3 +1,12 @@
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a:visited{
+    color:whitesmoke;
+}
+
 .backdrop-img {
 
     position: absolute;
@@ -36,6 +45,7 @@ p{
     border-radius: 0.3rem;
     background-color: rgb(30,30,30);
     font: medium Trebuchet MS;
+    cursor: pointer;
 
 }
 
@@ -47,6 +57,8 @@ p{
     border-radius: 0.3rem;
     background-color: steelblue;
     font: medium Trebuchet MS;
+    margin-left:1rem;
+    cursor: pointer;
 
 }
 
@@ -54,4 +66,10 @@ p{
 
     border-radius: 1rem;
     width: 10vw;
+}
+
+.actor-img{
+
+    border-radius: 1rem;
+    width: 5vw;
 }

@@ -1,3 +1,6 @@
-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../public/netflix-background.jpg);
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+body{
+    margin: 0;
+    padding: 0;
 }

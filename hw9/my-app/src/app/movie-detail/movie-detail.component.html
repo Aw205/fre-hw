@@ -16,7 +16,7 @@
         <p> Home Page <a [href]="data.homepage"> {{data.homepage}} </a> </p>
 
         <button class="play-button"> &#9658; PLAY NOW</button>
-        <button class="trailer-button">TRAILER</button>
+        <button class="trailer-button" (click)="openDialog()">TRAILER</button>
     </div>
 
     <div style="width: 50%; padding-top: 5%;">
@@ -27,6 +27,15 @@
             }
         </div>
         <p>Actors</p>
+        <div style="display: flex; gap: 1rem; overflow: scroll;max-width: 100%;">
+            @for(br of actorData.cast | slice:1:10; track br){
+
+                <div style="display: flex; flex-direction: column;">
+                    <img [src]="'https://image.tmdb.org/t/p/original'+ br.profile_path" class="actor-img" >
+                    <p>{{br.name}}</p>
+                </div>
+            }
+        </div>
 
     </div>
 
