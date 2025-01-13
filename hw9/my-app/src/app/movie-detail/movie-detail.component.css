@@ -1,0 +1,57 @@
+.backdrop-img {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    filter: brightness(0.5);
+    z-index: -1;
+
+}
+
+h1{
+    color: whitesmoke;
+    font: 3rem 'Trebuchet MS';
+}
+
+p{
+
+    color: whitesmoke;
+    font: medium Trebuchet MS;
+
+}
+
+.overview{
+
+    color: lightgray;
+    line-height: 1.5;
+
+}
+
+.play-button{
+
+    border: none;
+    color: lightgray;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    background-color: rgb(30,30,30);
+    font: medium Trebuchet MS;
+
+}
+
+.trailer-button{
+
+    border: none;
+    color: whitesmoke;
+    padding:1rem;
+    border-radius: 0.3rem;
+    background-color: steelblue;
+    font: medium Trebuchet MS;
+
+}
+
+.poster-img{
+
+    border-radius: 1rem;
+    width: 10vw;
+}

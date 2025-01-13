@@ -4,7 +4,7 @@ import { Movie } from '../movie';
 @Component({
   selector: 'app-movie-item',
   templateUrl: './movie-item.component.html',
-  styleUrl: './movie-item.component.scss'
+  styleUrl: './movie-item.component.css'
 })
 export class MovieItemComponent {
 

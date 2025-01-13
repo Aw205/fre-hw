@@ -6,15 +6,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
-import {MatButtonModule} from '@angular/material/button';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatIconModule} from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
-import {MatCardModule} from '@angular/material/card';
 import { MovieItemComponent } from './movie-item/movie-item.component';
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterComponent } from './register/register.component';
+import { RegisterTmdbComponent } from './register-tmdb/register-tmdb.component';
+import { RegisterPlanComponent } from './register-plan/register-plan.component';
+import { SignupComponent } from './signup/signup.component';
+import {ReactiveFormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -24,16 +25,16 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     MovieItemComponent,
     MovieListComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    RegisterComponent,
+    RegisterTmdbComponent,
+    RegisterPlanComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatButtonModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatInputModule,
-    MatCardModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
   ],

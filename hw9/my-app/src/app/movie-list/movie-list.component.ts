@@ -4,7 +4,7 @@ import { MovieService } from '../movie.service';
 @Component({
   selector: 'app-movie-list',
   templateUrl: './movie-list.component.html',
-  styleUrl: './movie-list.component.scss'
+  styleUrl: './movie-list.component.css'
 })
 export class MovieListComponent {
 
@@ -14,7 +14,6 @@ export class MovieListComponent {
   ngOnInit(){
 
     this.movieService.getMovieData().subscribe();
-
     // this.movieService.movies$.subscribe();
 
   }

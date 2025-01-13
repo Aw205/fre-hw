@@ -1,0 +1,45 @@
+a {
+    font: 1em Trebuchet MS;
+    color: whitesmoke;
+    text-decoration: none;
+    position: relative;
+}
+
+b {
+    font-size: large;
+    display: block;
+
+}
+
+.backdrop-img {
+
+    filter: brightness(0.3);
+    position: absolute;
+    width: 100%;
+    object-fit: scale-down;
+}
+
+.poster-img {
+
+    width: 50%;
+    padding: 1rem;
+
+}
+
+.tag-container {
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.movie-tag {
+    background-color: maroon;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.movie-container {
+    position: relative;
+    border: 0.2em ridge dimgray;
+}

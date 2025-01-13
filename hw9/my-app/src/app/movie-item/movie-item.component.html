@@ -1,24 +1,21 @@
+<div class="movie-container">
 
-<a [routerLink]="'/details/' + data.id" routerLinkActive="active" ariaCurrentWhenActive="page" style="font: 1em Trebuchet MS;color:whitesmoke; background-size: cover; border:0.3rem ridge dimgray; " [style.backgroundImage]="'linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(https://image.tmdb.org/t/p/original'+ data.backdrop_path + ')'">
+    <img [src]="'https://image.tmdb.org/t/p/original'+ data.poster_path" class="backdrop-img">
 
-    <img [src]="'https://image.tmdb.org/t/p/original'+ data.poster_path" style="width: 50%;">
+    <a [routerLink]="'/details/' + data.id" routerLinkActive="active" ariaCurrentWhenActive="page">
 
-    <b>{{data.original_title}}</b>
+        <img [src]="'https://image.tmdb.org/t/p/original'+ data.poster_path" class="poster-img">
 
-    <div style="display: flex; justify-content: space-around;">
-        <div style="background-color: maroon; border-radius: 10px; text-align: center; width: 30%;">
-            {{data.release_date.substring(0,4)}}
-        </div>
-        <div style="background-color: maroon; border-radius: 10px; text-align: center;width: 30%;">
-            {{data.original_language}}
-        </div>
-        <div style="background-color: maroon; border-radius: 10px; text-align: center;width: 30%;">
-            {{data.vote_average | number: '1.0-1'}}
-        </div>
-    </div>
+        <b>{{data.original_title}}</b>
 
-    <p>
-        {{data.overview.substring(0,100) + "..."}}
-    </p>
+        <p class="tag-container">
+            <i class="movie-tag"> {{data.release_date.substring(0,4)}} </i>
+            <i class="movie-tag"> {{data.original_language | uppercase}} </i>
+            <i class="movie-tag" style="color:goldenrod;"> {{data.vote_average | number: '1.1-1'}} </i>
+        </p>
 
-</a>
+        <i> {{data.overview.substring(0,100) + "..."}}</i>
+
+    </a>
+
+</div>

@@ -41,10 +41,19 @@ export class MovieService {
 
       return this.http.get(`https://api.themoviedb.org/3/movie/${id}?api_key=58c01d232e6173f5b297b33fa4bb8388`).pipe(
         tap(movie => {
-          console.log(movie);
+          //console.log(movie);
         })
       );
   }
+
+  getMovieImages(id:number){
+
+    return this.http.get(`https://api.themoviedb.org/3/movie/${id}/images?api_key=58c01d232e6173f5b297b33fa4bb8388`).pipe(
+      tap(movie => {
+        //console.log(JSON.stringify(movie));
+      })
+    );
+}
 
 
 }

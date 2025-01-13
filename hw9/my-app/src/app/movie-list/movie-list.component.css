@@ -1,0 +1,6 @@
+.movie-grid {
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+}

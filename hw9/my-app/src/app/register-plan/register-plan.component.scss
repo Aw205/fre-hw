@@ -1,0 +1,67 @@
+
+p{
+    color: black;
+    font: medium Trebuchet MS;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: inherit;
+}
+
+
+.checkmark-item::before{
+
+    content: "✓ ";
+    color: crimson;
+}
+
+h1{
+    font-family: 'Trebuchet MS';
+}
+
+table{
+
+    color: black;
+    font: medium Trebuchet MS;
+    border-collapse: collapse;
+}
+
+th{
+    text-align: left;
+}
+
+td{
+
+    padding: 1.5rem;
+}
+
+.plan{
+    color:whitesmoke;
+    background-color: crimson;
+    cursor: pointer;
+    opacity: 0.7;
+    border:1rem solid white;
+    padding: 2rem;
+}
+
+.plan:hover{
+
+    opacity: 1;
+}
+
+button{
+    font: larger Trebuchet MS;
+    width: 20%;
+    background-color: crimson;
+    border-radius: 3px;
+    color: whitesmoke;
+    border: none;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}

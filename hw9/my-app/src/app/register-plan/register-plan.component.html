@@ -1,0 +1,51 @@
+
+    <div style="position: relative; width: fit-content; left:50%; transform: translateX(-50%);">
+        <p>STEP 2 OF 3</p>
+        <h1>Choose the plan that's right for you</h1>
+        <p class="checkmark-item">Watch all you want. Ad-free.</p>
+        <p class="checkmark-item">Recommendations just for you.</p>
+        <p class="checkmark-item">Change or cancel your plan anytime.</p>
+    
+        <table>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td class="plan" (click)="onSelect('Basic')" [style.opacity]="selectedPlan=='Basic' ? 1 : 0.7">Basic
+                    </td>
+                    <td class="plan" (click)="onSelect('Standard')" [style.opacity]="selectedPlan=='Standard' ? 1 : 0.7">
+                        Standard</td>
+                    <td class="plan" (click)="onSelect('Premium')" [style.opacity]="selectedPlan=='Premium' ? 1 : 0.7">
+                        Premium</td>
+                </tr>
+                <tr style="border-bottom:1px solid black;">
+                    <th>Monthly price</th>
+                    <td [style.color]="selectedPlan=='Basic' ? 'crimson' : 'black'">$9.99</td>
+                    <td [style.color]="selectedPlan=='Standard' ? 'crimson' : 'black'">$15.49</td>
+                    <td [style.color]="selectedPlan=='Premium' ? 'crimson' : 'black'">$19.99</td>
+                </tr>
+                <tr>
+                    <th>Video quality</th>
+                    <td [style.color]="selectedPlan=='Basic' ? 'crimson' : 'black'">Good</td>
+                    <td [style.color]="selectedPlan=='Standard' ? 'crimson' : 'black'">Better</td>
+                    <td [style.color]="selectedPlan=='Premium' ? 'crimson' : 'black'">Best</td>
+                </tr>
+                <tr style="border-bottom:1px solid black;">
+                    <th>Resolution</th>
+                    <td [style.color]="selectedPlan=='Basic' ? 'crimson' : 'black'">480p</td>
+                    <td [style.color]="selectedPlan=='Standard' ? 'crimson' : 'black'">1080p</td>
+                    <td [style.color]="selectedPlan=='Premium' ? 'crimson' : 'black'">4K + HDR</td>
+                </tr>
+                <tr>
+                    <th>Watch on your TV, computer, mobile phone and tablet</th>
+                    <td [style.color]="selectedPlan=='Basic' ? 'crimson' : 'black'">&#x2713;</td>
+                    <td [style.color]="selectedPlan=='Standard' ? 'crimson' : 'black'">&#x2713;</td>
+                    <td [style.color]="selectedPlan=='Premium' ? 'crimson' : 'black'">&#x2713;</td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <a [routerLink]="'/signup/register-tmdb'" routerLinkActive="active" ariaCurrentWhenActive="page">
+            <button>Next</button>
+        </a>
+    
+    </div>
