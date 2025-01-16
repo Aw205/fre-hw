@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us',
@@ -8,12 +9,14 @@ import { Component } from '@angular/core';
 })
 export class ContactUsComponent {
 
-  name!:string;
-  message!:string;
+  nname:string = "";
+  mmessage:string = "";
   isSubmitted: boolean = false;
 
-  onSubmit(){
-    this.isSubmitted = true;
+  onSubmit(form:NgForm){
+    if(!form.invalid){
+      this.isSubmitted = true;
+    }
   }
 
 }

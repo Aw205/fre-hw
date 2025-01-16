@@ -7,7 +7,7 @@ a:visited{
 }
 
 a:hover{
-    filter:opacity(0.8)
+    filter:opacity(0.7);
 }
 
 .nav-container {

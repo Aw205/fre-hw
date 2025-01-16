@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 })
 export class DirectoryComponent {
 
-  userData: any;
+  userData: any = null;
 
   constructor(private http: HttpClient) {}
 

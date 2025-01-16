@@ -19,3 +19,7 @@ button{
 
     height: 4rem;
 }
+
+.error{
+    color: red;
+}
