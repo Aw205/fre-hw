@@ -5,8 +5,11 @@
     <p>Just one more step!</p>
 
     <form [formGroup]="tmdbForm">
-        <input type="text" placeholder="Enter your username" formControlName="username">
-        <input type="text" placeholder="Add your TMDB API key" formControlName="apiKey">
+        <div style="display: flex; flex-direction: column; gap:1rem">
+            <input type="text" placeholder="Enter your username" formControlName="username">
+            <input type="text" placeholder="Add your TMDB API key" formControlName="apiKey">
+        </div>
+        
     </form>
 
     <a [routerLink]="'/movielist'" routerLinkActive="active" ariaCurrentWhenActive="page">

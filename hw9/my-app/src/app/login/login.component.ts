@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-login',
@@ -16,8 +16,8 @@ export class LoginComponent {
   ngOnInit(){
 
     this.loginForm = this.fb.group({
-      email: [],
-      password: []
+      email: ["",[Validators.required,Validators.email]],
+      password: ["",Validators.required,Validators.minLength(5)]
     });
   }
 

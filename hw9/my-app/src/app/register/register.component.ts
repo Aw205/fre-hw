@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-register',
@@ -16,8 +16,8 @@ export class RegisterComponent {
   ngOnInit() {
 
     this.registerForm = this.fb.group({
-      email: [],
-      password: []
+      email: ["",[Validators.required,Validators.email]],
+      password: ["",Validators.required,Validators.minLength(5)]
     });
   }
 }

@@ -1,0 +1,12 @@
+<div style="display: flex; flex-direction: column; gap:1vh; width: 80%; position: relative; left: 50%; transform: translateX(-50%);">
+    <h1>CVS Users</h1>
+    @for(user of userData.data; track user){
+      <div style="display: flex; background-color: lightgray; gap:1vw; padding: 2rem;">
+        <img [src]="user.avatar" style="border-radius: 50%;">
+        <div style="display: flex; flex-direction: column;">
+          <h2>{{user.first_name + " " + user.last_name}}</h2>
+          <a routerLink="/contactUs" >{{user.email}}</a>
+        </div>
+      </div>
+      }
+  </div>

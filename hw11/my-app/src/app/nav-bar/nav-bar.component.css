@@ -1,0 +1,22 @@
+a {
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover{
+    filter:opacity(0.8)
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 10vw 1vh 10vw;
+    align-items: center;
+    background-color: crimson;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+}

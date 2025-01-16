@@ -1,0 +1,21 @@
+button{
+
+    width: 40%;
+    background-color: crimson;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    filter: drop-shadow(0 0 0.1rem crimson);
+    cursor: pointer;
+}
+
+.name-input{
+
+    height: 2rem;
+}
+
+.message-input{
+
+    height: 4rem;
+}

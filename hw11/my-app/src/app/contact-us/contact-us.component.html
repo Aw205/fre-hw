@@ -1,0 +1,29 @@
+<form (ngSubmit)="onSubmit()">
+    <div style="display: flex; flex-direction: column; gap: 1rem; width: 30%; padding-left: 10vw; padding-top: 5vh;">
+        <h1>Contact Us</h1>
+
+        @if(!isSubmitted){
+        <label for="name">Name:</label>
+        <input type="text" name="name" required minlength="10" class="name-input" [(ngModel)]="name">
+        <label for="name">Message:</label>
+        <input type="text" name="message" required minlength="10" class="message-input" [(ngModel)]="message">
+        <button type="submit"> Send Message </button>
+        }
+        @else{
+
+        <p style="color: green; font-weight: bold;">Thank you for contacting us. We will be in touch shortly!</p>
+
+        <div>
+            <hr>
+        </div>
+
+        <p style="font-weight: bold; margin:0;">You have submitted the following message:</p>
+        <p style="font-weight: bold; margin:0;">Name:</p>
+        <p>{{name}}</p>
+        <p style="font-weight: bold; margin:0;">Message:</p>
+        <p>{{message}}</p>
+
+        }
+
+    </div>
+</form>

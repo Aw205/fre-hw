@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
     selector: 'app-register-tmdb',
@@ -16,8 +16,8 @@ export class RegisterTmdbComponent {
   ngOnInit(){
 
     this.tmdbForm = this.fb.group({
-      username: [],
-      apiKey: []
+      username: ["",Validators.required],
+      apiKey: ["",Validators.required]
     });
   }
 
