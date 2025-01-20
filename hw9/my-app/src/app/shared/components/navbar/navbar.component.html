@@ -1,0 +1,13 @@
+<div style="display: flex; justify-content: space-between; align-items: center; padding-right: 1vw;">
+
+    <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <img src="Netflix_Logo_name.png" width="100">
+    </a>
+    <div>
+        @if(authService.username){
+        <span>{{authService.username}}</span>
+        }
+        <button (click)="onClick()">{{authService.username ? 'Sign Out' : 'Sign In'}}</button>
+    </div>
+
+</div>

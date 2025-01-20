@@ -1,0 +1,45 @@
+<div
+    style="position: relative; width: 25%; left:50%; transform: translateX(-50%); display: flex; flex-direction: column; min-height: 70vh;">
+    <p>STEP 1 OF 3</p>
+    <h1>Create a password to start your membership</h1>
+    <p>Just a few more steps and you're done!</p>
+    <p>We hate paperwork, too.</p>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div style="display: flex; flex-direction: column; gap:1rem">
+            <input type="text" placeholder="Enter your email" name="email" formControlName="email">
+
+            @if(registerForm.get('email')?.dirty){
+            @if(registerForm.get('email')?.hasError('required')){
+            <div class="error">Email is required</div>
+            }
+            @else if(registerForm.get('email')?.hasError('email')){
+            <div class="error">Please enter a valid email address</div>
+            }
+            @else if(registerForm.get('email')?.hasError('hasEmail')){
+            <div class="error">Email already exists</div>
+            }
+            }
+
+            <input type="password" placeholder="Add a password" name="password" formControlName="password">
+
+            @if(registerForm.get('password')?.dirty){
+            @if(registerForm.get('password')?.hasError('required')){
+            <div class="error">Password is required</div>
+            }
+            @else if(registerForm.get('password')?.hasError('minlength')){
+            <div class="error">Password must be at least 5 characters long.</div>
+            }
+            @else if(registerForm.get('password')?.hasError('maxlength')){
+            <div class="error">Password must be at most 10 characters long.</div>
+            }
+            }
+            <button type="submit">Next</button>
+        </div>
+
+    </form>
+
+
+
+
+</div>

@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+<div
+    style="position: fixed; left: 50%; top:50%; transform: translate(-50%,-50%); background-color: rgba(10,10,10,0.8); width: 20%; height: 70%; padding: 4rem; padding-top: 3rem;">
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <p style="font-size: larger; font: xx-large Trebuchet MS">Sign In</p>
+
+            @if(!authService.emailExists){
+            <p class="email-error">Sorry, we can't find an account with this email address. Please try again or create a
+                new account.</p>
+            }
+
+            <input type="text" placeholder="Email or mobile number" name="email" formControlName="email">
+
+            @if(loginForm.get('email')?.dirty){
+            @if(loginForm.get('email')?.hasError('required')){
+            <div class="error">Email is required</div>
+            }
+            @else if(loginForm.get('email')?.hasError('email')){
+            <div class="error">Please enter a valid email address</div>
+            }
+            }
+
+            <input type="password" placeholder="Enter your password" name="password" formControlName="password">
+
+            @if(loginForm.get('password')?.dirty){
+            @if(loginForm.get('password')?.hasError('required')){
+            <div class="error">Password is required</div>
+            }
+            @else if(loginForm.get('password')?.hasError('minlength')){
+            <div class="error">Password must be at least 4 characters long.</div>
+            }
+            @else if(loginForm.get('password')?.hasError('maxlength')){
+            <div class="error">Password must be at most 10 characters long.</div>
+            }
+            }
+
+            <button type="submit"> Sign In </button>
+            <p style="font: small Trebuchet MS; color: dimgray;">New to Netflix? <a routerLink="/signup/register"
+                    style="color: whitesmoke;"> Sign up now</a>.</p>
+        </div>
+    </form>
+
+</div>

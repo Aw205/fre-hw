@@ -1,0 +1,21 @@
+<div class="movie-container">
+
+    <img [src]="'https://image.tmdb.org/t/p/original'+ data.poster_path" class="backdrop-img">
+
+    <a [routerLink]="'/movielist/' + data.id" routerLinkActive="active" ariaCurrentWhenActive="page">
+
+        <img [src]="'https://image.tmdb.org/t/p/original'+ data.poster_path" class="poster-img">
+
+        <b>{{data.original_title}}</b>
+
+        <p class="tag-container">
+            <i class="movie-tag"> {{data.release_date.substring(0,4)}} </i>
+            <i class="movie-tag"> {{data.original_language | uppercase}} </i>
+            <i class="movie-tag" style="color:goldenrod;"> {{data.vote_average | number: '1.1-1'}} </i>
+        </p>
+
+        <i> {{data.overview.substring(0,100) + "..."}}</i>
+
+    </a>
+
+</div>
