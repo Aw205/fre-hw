@@ -6,11 +6,8 @@
     <div style="width: 50%; padding-left: 5%;">
         <h1> {{data.original_title}}</h1>
         <p>
-           <span style="color:goldenrod"> &starf; </span>  {{data.vote_average | number: '1.1-1'}} | {{Math.round(data.popularity)}}
-
-            @for(genre of data.genres; track genre){
-            {{genre.name + ","}}
-            }
+            <span style="color:goldenrod"> &starf; </span> {{data.vote_average | number: '1.1-1'}} |
+            {{Math.round(data.popularity)}} {{genreNames}}
         </p>
         <p class="overview"> {{data.overview}}</p>
         <p> Home Page <a [href]="data.homepage"> {{data.homepage}} </a> </p>
@@ -20,20 +17,19 @@
     </div>
 
     <div style="width: 50%; padding-top: 5%;">
-        <p>Poster</p>
-        <div style="display: flex; gap: 1rem; overflow-x: scroll;max-width: 100%;">
+        <p>Posters</p>
+        <div class="extra-details">
             @for(br of imageData.backdrops | slice:1:10; track br){
-                <img [src]="'https://image.tmdb.org/t/p/original'+ br.file_path" class="poster-img" >
+            <img [src]="'https://image.tmdb.org/t/p/original'+ br.file_path" class="poster-img">
             }
         </div>
         <p>Actors</p>
-        <div style="display: flex; gap: 1rem; overflow-x: scroll; max-width: 100%;">
+        <div class="extra-details">
             @for(br of actorData.cast | slice:1:10; track br){
-
-                <div style="display: flex; flex-direction: column;">
-                    <img [src]="'https://image.tmdb.org/t/p/original'+ br.profile_path" class="actor-img" >
-                    <p>{{br.name}}</p>
-                </div>
+            <div style="display: flex; flex-direction: column;">
+                <img [src]="'https://image.tmdb.org/t/p/original'+ br.profile_path" class="actor-img">
+                <p>{{br.name}}</p>
+            </div>
             }
         </div>
 

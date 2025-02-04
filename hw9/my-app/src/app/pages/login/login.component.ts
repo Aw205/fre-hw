@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent {
 
   loginForm!: FormGroup;
 
-  constructor(private fb: FormBuilder, public authService: AuthService) { }
+  constructor(private fb: FormBuilder, public authService: AuthService,private router: Router) { }
 
   ngOnInit() {
 
@@ -29,7 +30,6 @@ export class LoginComponent {
       let email: string = this.loginForm.get('email')!.value;
       let password = this.loginForm.get('password')!.value;
       this.authService.logIn(email, password);
-
     }
   }
 

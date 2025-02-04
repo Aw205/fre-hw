@@ -7,7 +7,6 @@ import { Injectable } from '@angular/core';
 })
 export class movieListGuard implements CanActivate {
 
-
   constructor(private authService: AuthService, private router: Router) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {

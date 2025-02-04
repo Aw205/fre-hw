@@ -11,8 +11,8 @@ import { CommonModule } from '@angular/common';
 const routes: Routes = [{
     path: '', component: SignupComponent, children: [
         { path: 'register', component: RegisterComponent },
-        { path: 'register-plan', component: RegisterPlanComponent },
         { path: 'register-tmdb', component: RegisterTmdbComponent },
+        { path: 'register-plan', component: RegisterPlanComponent },
         { path: '', redirectTo: 'register', pathMatch: 'full' },
     ]
 }];

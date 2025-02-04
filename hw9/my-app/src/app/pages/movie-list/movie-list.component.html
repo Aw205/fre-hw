@@ -1,7 +1,14 @@
-<div style="display: flex; justify-content: center; width: 80%; margin:auto; padding-top: 4vh; background-color: rgb(20,20,20);">
+<app-navbar></app-navbar>
+
+
+<div style="display: flex; justify-content: center; width: 80%; margin:auto; padding-top: 4vh;">
     <div class="movie-grid">
+
+
         @for(movie of movieService.movies; track movie){
         <app-movie-item [data]="movie"></app-movie-item>
         }
+
+        
     </div>
 </div>

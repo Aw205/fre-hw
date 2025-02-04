@@ -13,7 +13,7 @@ b {
 
 .backdrop-img {
 
-    filter: brightness(0.3);
+    filter: brightness(0.3) blur(0.3rem);
     position: absolute;
     width: 100%;
     object-fit: scale-down;
@@ -42,4 +42,5 @@ b {
 .movie-container {
     position: relative;
     border: 0.2em ridge dimgray;
+    border-radius: 10px;
 }

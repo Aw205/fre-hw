@@ -1,10 +1,15 @@
-a{
+a {
     text-decoration: none;
     color: whitesmoke;
 }
 
-a:visited{
-    color:whitesmoke;
+a:visited {
+    color: whitesmoke;
+}
+
+a:hover {
+
+    text-decoration: underline;
 }
 
 .backdrop-img {
@@ -18,58 +23,66 @@ a:visited{
 
 }
 
-h1{
+h1 {
     color: whitesmoke;
     font: 3rem 'Trebuchet MS';
 }
 
-p{
+p {
 
     color: whitesmoke;
     font: medium Trebuchet MS;
 
 }
 
-.overview{
+.overview {
 
     color: lightgray;
     line-height: 1.5;
 
 }
 
-.play-button{
+.play-button {
 
     border: none;
     color: lightgray;
     padding: 1rem;
     border-radius: 0.3rem;
-    background-color: rgb(30,30,30);
+    background-color: rgb(30, 30, 30);
     font: medium Trebuchet MS;
     cursor: pointer;
 
 }
 
-.trailer-button{
+.trailer-button {
 
     border: none;
     color: whitesmoke;
-    padding:1rem;
+    padding: 1rem;
     border-radius: 0.3rem;
     background-color: steelblue;
     font: medium Trebuchet MS;
-    margin-left:1rem;
+    margin-left: 1rem;
     cursor: pointer;
 
 }
 
-.poster-img{
+.poster-img {
 
     border-radius: 1rem;
     width: 10vw;
 }
 
-.actor-img{
+.actor-img {
 
     border-radius: 1rem;
     width: 5vw;
+}
+
+.extra-details {
+
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+    max-width: 100%;
 }

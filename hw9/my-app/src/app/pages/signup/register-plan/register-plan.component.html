@@ -1,18 +1,22 @@
+<div style="position: relative; width: fit-content; left:50%; transform: translateX(-50%);">
+    <p>STEP 2 OF 3</p>
+    <h1>Choose the plan that's right for you</h1>
+    <p class="checkmark-item">Watch all you want. Ad-free.</p>
+    <p class="checkmark-item">Recommendations just for you.</p>
+    <p class="checkmark-item">Change or cancel your plan anytime.</p>
 
-    <div style="position: relative; width: fit-content; left:50%; transform: translateX(-50%);">
-        <p>STEP 2 OF 3</p>
-        <h1>Choose the plan that's right for you</h1>
-        <p class="checkmark-item">Watch all you want. Ad-free.</p>
-        <p class="checkmark-item">Recommendations just for you.</p>
-        <p class="checkmark-item">Change or cancel your plan anytime.</p>
-    
+
+
+    <form [formGroup]="planForm" (ngSubmit)="onSubmit()">
+
         <table>
             <tbody>
                 <tr>
                     <td></td>
                     <td class="plan" (click)="onSelect('Basic')" [style.opacity]="selectedPlan=='Basic' ? 1 : 0.7">Basic
                     </td>
-                    <td class="plan" (click)="onSelect('Standard')" [style.opacity]="selectedPlan=='Standard' ? 1 : 0.7">
+                    <td class="plan" (click)="onSelect('Standard')"
+                        [style.opacity]="selectedPlan=='Standard' ? 1 : 0.7">
                         Standard</td>
                     <td class="plan" (click)="onSelect('Premium')" [style.opacity]="selectedPlan=='Premium' ? 1 : 0.7">
                         Premium</td>
@@ -43,9 +47,9 @@
                 </tr>
             </tbody>
         </table>
-    
-        <a [routerLink]="'/signup/register-tmdb'" routerLinkActive="active" ariaCurrentWhenActive="page">
-            <button>Next</button>
-        </a>
-    
-    </div>
+
+        <button>Next</button>
+
+    </form>
+
+</div>

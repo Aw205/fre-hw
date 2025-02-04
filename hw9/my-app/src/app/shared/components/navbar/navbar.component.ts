@@ -10,10 +10,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
 
-
-    constructor(public authService: AuthService, private router: Router) {
-
-    }
+    constructor(public authService: AuthService, private router: Router) { }
 
     onClick() {
 

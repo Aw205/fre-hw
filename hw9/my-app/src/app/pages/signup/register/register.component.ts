@@ -31,7 +31,7 @@ export class RegisterComponent {
       this.authService.registrationData.email = this.registerForm.get('email')?.value;
       this.authService.registrationData.password = this.registerForm.get('password')?.value;
 
-      this.router.navigate(['/signup/register-plan']);
+      this.router.navigate(['/signup/register-tmdb']);
     }
   }
 }

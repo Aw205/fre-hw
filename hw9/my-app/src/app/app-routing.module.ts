@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { moviePosterResolver } from './core/resolvers/movie-poster.resolver';
+import { movieCreditResolver } from './core/resolvers/movie-credit.resolver';
+import { movieDetailResolver } from './core/resolvers/movie-detail.resolver';
+import { movieVideoResolver } from './core/resolvers/movie-video.resolver';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -21,7 +25,14 @@ const routes: Routes = [
   },
   {
     path: 'movielist/:id', loadChildren: () =>
-      import('./pages/movie-detail/movie-detail.module').then((m) => m.MovieDetailModule)
+      import('./pages/movie-detail/movie-detail.module').then((m) => m.MovieDetailModule),
+    resolve: {
+      videoData: movieVideoResolver,
+      imageData: moviePosterResolver,
+      actorData: movieCreditResolver,
+      data: movieDetailResolver
+  
+    },
   }
 ];
 

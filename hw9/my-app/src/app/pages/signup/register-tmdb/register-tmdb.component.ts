@@ -29,7 +29,7 @@ export class RegisterTmdbComponent {
 
       this.authService.registrationData.tmdbKey = this.tmdbForm.get('apiKey')?.value;
       this.authService.registrationData.username = this.tmdbForm.get('username')?.value;
-      this.router.navigate(['/home']);
+      this.router.navigate(['/signup/register-plan']);
     }
   }
 
